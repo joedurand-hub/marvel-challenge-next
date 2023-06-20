@@ -28,9 +28,8 @@ function Home() {
   }
   );
 
-
   return (
-    <Layout>
+    <Layout text={data?.attributionText}>
       {loading && (
         <Center>
           <Loader />

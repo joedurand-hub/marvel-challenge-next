@@ -4,8 +4,9 @@ import Footer from "@/components/Footer/Index"
 import Nav from "@/components/NavBar/Index"
 import Center from "@/components/Center/Index";
 import Anchor from "../Anchor/Anchor";
+import Image from "next/image"
 
-const Layout = ({ children,  }) => {
+const Layout = ({ children, text }) => {
     const title = 'Título de la página';
     const description = 'Descripción de la página';
     const keywords = 'palabras clave, SEO, Next.js';
@@ -31,7 +32,7 @@ const Layout = ({ children,  }) => {
                 <Center>
                     <Nav>
                         <Anchor path="/">
-                        <img className={styles.logo} src="/logo.png" alt="Logo" />
+                        <Image width={150} height={150} className={styles.logo} src="/logo.png" alt="Logo" />
                         </Anchor>
                     </Nav>
                 </Center>
@@ -40,7 +41,7 @@ const Layout = ({ children,  }) => {
                 {children}
             </main>
             <Footer>
-
+{text}
             </Footer>
         </>
     );

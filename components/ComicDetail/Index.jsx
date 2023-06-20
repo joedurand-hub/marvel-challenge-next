@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./Index.module.css"
 import Layout from '../Layout/Index'
+import Image from "next/image"
 
 const Index = ({ data }) => {
     return (
@@ -9,7 +10,7 @@ const Index = ({ data }) => {
             <article className={styles.container}>
                 <div className={styles.container_image}>
                     {data.images.map((image, index) => (
-                        <img key={index} src={`${image.path}.${image.extension}`} alt={data.description} />
+                        <Image key={index} width={400} height={750} src={`${image.path}.${image.extension}`} alt={data.description} />
                     ))}
                 </div>
                 <div className={styles.container_content}>

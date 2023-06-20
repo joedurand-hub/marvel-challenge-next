@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Index = () => {
+const Index = ({text}) => {
   return (
-    <div style={{display: "flex", justifyContent: "center", marginTop: "20px"}}>Footer</div>
+    <div style={{display: "flex", justifyContent: "center", marginTop: "20px"}}>{text}</div>
   )
 }
 
