@@ -40,11 +40,11 @@ function Home() {
           <p>Se ha producido un error: {error}</p>
         </Center>
       )}
+      {data && (
+        <>
       <Center>
-
         <Input label="Buscar comic" type="search" placeholder="Busca por nombre" onChange={handleSearchComic} />
       </Center>
-      {data && (
         <section>
           <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", maxWidth: "100vw", justifyContent: "center", alignItems: "center" }}>
             {filteredComics?.map((object) => {
@@ -56,6 +56,7 @@ function Home() {
             })}
           </div>
         </section>
+            </>
       )}
     </Layout>
   )

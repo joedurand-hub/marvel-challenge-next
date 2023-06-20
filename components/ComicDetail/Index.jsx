@@ -17,8 +17,8 @@ const Index = ({ data }) => {
 
                     <h4 className={styles.container_content_title}>Título:{data?.title}</h4>
                     <h5 className={styles.container_content_format}>Formato: {data?.format}</h5>
-                    <h5 className={styles.container_content_creators}><strong>Creadores:</strong> {data?.creators.items?.map((creator) => (
-                        <p>
+                    <h5 className={styles.container_content_creators}><strong>Creadores:</strong> {data?.creators.items?.map((creator, index) => (
+                        <p key={index}>
                             Nombre: {creator.name} <br />
                             Rol: {creator.role}
                         </p>
