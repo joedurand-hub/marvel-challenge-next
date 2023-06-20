@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://gateway.marvel.com'
+export const BASE_URL = 'https://gateway.marvel.com'
 export const GET_COMIC = '/v1/public/comics'
 export const GET_COMIC_BY_ID = `/v1/public/comics/:id`
 export const PUBLIC_KEY = '3a6e11fea456ed169451605d221b6cb2'
