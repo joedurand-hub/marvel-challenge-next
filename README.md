@@ -2,7 +2,7 @@
 
 npm install,
 npm run dev
-Link de deploy: https://marvel-challenge-next-6cew.vercel.app/comic/1590
+Link de deploy: https://marvel-challenge-next-6cew.vercel.app
 ![imagen](./public/imagen1.jpg)
 ![imagen](./public/imagen2.jpg)
 Para este proyecto se utilizó la última versión de Next.js, aún así, sólo se implementó lo justo y necesario.
