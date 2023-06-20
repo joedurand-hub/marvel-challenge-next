@@ -4,6 +4,7 @@ const Index = ({title, description, keywords, robots, ogTitle, ogDescription, og
   return (
     <Head>
         <title>{title}</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="robots" content={robots} />
