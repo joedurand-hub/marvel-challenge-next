@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./Index.module.css";
 
 const Anchor = React.forwardRef(
-  ({ onClick, path, name, disabled, children }, ref) => {
+  ({ onClick, path, disabled, children }, ref) => {
     return (
       <Link href={path} passHref
       rel="noopener noreferrer"
@@ -11,7 +11,7 @@ const Anchor = React.forwardRef(
       disabled={disabled}
       ref={ref}
       >
-          {name} {children}
+         {children}
       </Link>
     );
   }

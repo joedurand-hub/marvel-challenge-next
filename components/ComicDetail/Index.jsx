@@ -8,8 +8,8 @@ const Index = ({ data }) => {
 
             <article className={styles.container}>
                 <div className={styles.container_image}>
-                    {data.images.map((image) => (
-                        <img src={`${image.path}.${image.extension}`} alt={data.description} />
+                    {data.images.map((image, index) => (
+                        <img key={index} src={`${image.path}.${image.extension}`} alt={data.description} />
                     ))}
                 </div>
                 <div className={styles.container_content}>

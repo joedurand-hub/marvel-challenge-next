@@ -10,6 +10,7 @@ import Layout from "@/components/Layout/Index";
 function Home() {
   const { loading, error, data, sendRequest } = useHttp()
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     sendRequest(`${BASE_URL}${GET_COMIC}?limit=100&offset=0&ts=${TIMESTAMP}&apikey=${PUBLIC_KEY}&hash=${HASH}`, 'GET')
   }, [])
 
@@ -49,7 +50,9 @@ function Home() {
           <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", maxWidth: "100vw", justifyContent: "center", alignItems: "center" }}>
             {filteredComics?.map((object) => {
               return (
-                <Comic data={object} />
+                <div key={object.id}>
+                  <Comic data={object} />
+                </div>
               )
             })}
           </div>
